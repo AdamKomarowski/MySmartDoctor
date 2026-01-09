@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MySmartDoctor – Kontrola znamion skórnych</title>
+  <meta name="description" content="MySmartDoctor – aplikacja mobilna do monitorowania znamion skórnych i wspomagania wczesnego wykrywania czerniaka."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-light: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22d3ee;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, var(--bg), var(--bg-light));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: var(--radius);
+    }
+
+    section {
+      padding: 64px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding-top: 96px;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: #020617;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(34,211,238,0.3);
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background: rgba(255,255,255,0.04);
+      padding: 24px;
+      border-radius: var(--radius);
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background: radial-gradient(circle at top, rgba(34,211,238,0.15), transparent 60%);
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3.2rem;
+      }
+
+      .features {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .gallery {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>MySmartDoctor</h1>
+      <p>
+        Inteligentna aplikacja mobilna do monitorowania znamion skórnych  
+        i wspomagania wczesnego wykrywania czerniaka.
+      </p>
+      <a href="#cta" class="btn">Rozpocznij kontrolę skóry</a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section>
+    <div class="container">
+      <h2>Jak działa MySmartDoctor</h2>
+      <div class="features">
+
+        <div class="feature">
+          <h3>📸 Analiza zdjęcia</h3>
+          <p>
+            Wykonaj zdjęcie znamienia bezpośrednio w aplikacji.
+            Algorytmy analizują jego kształt, kolor i strukturę.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>🧠 Wspomaganie AI</h3>
+          <p>
+            Sztuczna inteligencja ocenia ryzyko zmian skórnych
+            i wskazuje, czy warto skonsultować się z dermatologiem.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>📊 Historia i porównania</h3>
+          <p>
+            Monitoruj zmiany w czasie, porównuj zdjęcia
+            i zachowuj historię kontroli swojej skóry.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <div class="container">
+      <h2>Zobacz aplikację</h2>
+      <div class="gallery">
+        <img src="images/Screenshot_1.png" alt="Ekran główny aplikacji MySmartDoctor" loading="lazy">
+        <img src="images/Screenshot_2.png" alt="Analiza znamienia skórnego" loading="lazy">
+        <img src="images/Screenshot_3.png" alt="Wynik analizy ryzyka" loading="lazy">
+        <img src="images/Screenshot_4.png" alt="Historia i porównanie zdjęć" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="cta">
+    <div class="container">
+      <h2>Zadbaj o swoją skórę</h2>
+      <p>
+        MySmartDoctor nie zastępuje lekarza,  
+        ale pomaga szybciej zauważyć niepokojące zmiany.
+      </p>
+      <a href="#" class="btn">Pobierz aplikację</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 MySmartDoctor. Aplikacja wspierająca profilaktykę zdrowia skóry.
+  </footer>
+
+</body>
+</html>
